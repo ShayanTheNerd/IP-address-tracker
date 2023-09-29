@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" class="[-webkit-tap-highlight-color:transparent]">
+	<!-- prettier-ignore -->
+	<head>
+		<meta charset="UTF-8" />
+		<title>Multi-function Timepiece - Clock, Stopwatch, & Countdown Timer</title>
+
+		<meta name="theme-color" content="#f1f5f9" />
+		<meta name="author" content="Shayan Zamani" />
+		<meta name="color-scheme" content="light dark" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="keywords" content="multi-function timepiece, cubic slide effects, countdown timer, analog clock, stopwatch, versatile timepiece" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="shayan-zamani.me" />
+      <meta property="og:title" name="title" content="Clock, Stopwatch, & Countdown Timer" />
+      <meta property="og:url" content="https://shayanthenerd.github.io/multi-function-timepiece/" />
+      <meta property="og:image" content="https://shayanthenerd.github.io/multi-function-timepiece/og-img.webp" />
+      <meta property="og:image:alt" content="multi-function timepiece" />
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:description" name="description" content="Experience the ultimate timekeeping convenience with this multi-function timepiece including a live, analog clock, a stopwatch, and a countdown timer, featuring a cubic slide effect slider." />
+      
+      <meta name="twitter:site" content="@shayan-zamani.me">
+      <meta name="twitter:title" content="Clock, Stopwatch, & Countdown Timer">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="https://shayanthenerd.github.io/multi-function-timepiece/og-img.webp" />
+      <meta property="twitter:image:alt" content="multi-function timepiece" />
+      <meta name="twitter:description" content="Experience the ultimate timekeeping convenience with this multi-function timepiece including a live, analog clock, a stopwatch, and a countdown timer, featuring a cubic slide effect slider.">
+      
+		<link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
+		<link rel="stylesheet" href="assets/css/swiper.min.css" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
+      
+		<script defer src="./assets/js/swiper.min.js"></script>
+		<script type="module" src="./assets/js/app.js"></script>
+	</head>
+
+	<body
+		class="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-slate-100 to-slate-200 p-2.5 pb-28 pt-0 supports-[min-height:100dvh]:min-h-[100dvh] lg:items-center">
+		<h1
+			class="mb-20 mt-5 max-w-xs text-center text-2xl font-black tracking-wide text-slate-700 [text-wrap:balance] sm:max-w-max lg:mb-28 lg:mt-0 lg:text-3xl">
+			Multi-function Timepiece
+		</h1>
+
+		<main class="h-[380px] max-w-[300px] text-slate-100 sm:max-w-[350px]">
+			<!-- Timepiece cubic slides -->
+			<article class="cubic-slider relative h-full select-none">
+				<!-- Slider top pagination -->
+				<nav
+					role="tablist"
+					class="cubic-slider__pagination absolute !top-[-45px] flex h-[45px] divide-x overflow-hidden rounded-t-2xl text-[100%] font-semibold capitalize tracking-wide sm:text-[115%]"></nav>
+
+				<!-- Slides -->
+				<div class="swiper-wrapper p-0">
+					<!-- Analog clock -->
+					<section
+						role="tabpanel"
+						data-hash="clock"
+						class="swiper-slide flex flex-col items-center justify-evenly rounded-b-2xl bg-gradient-to-b from-blue-500 to-blue-600 text-center text-xl">
+						<div class="analog-clock relative h-52 w-52 rounded-full border-8 p-5">
+							<div class="relative h-full w-full translate-y-[-3px]">
+								<span id="hourHand" class="analog-clock__hand ml-5 h-2 w-[55px]" style="rotate: 90deg"></span>
+								<span
+									id="minuteHand"
+									class="analog-clock__hand mr-8 h-[6px] w-[75px]"
+									style="rotate: 90deg"></span>
+								<span id="secondHand" class="analog-clock__hand h-[4px] w-1/2" style="rotate: 90deg"></span>
+							</div>
+						</div>
+
+						<!-- Current date and time -->
+						<time datetime="" id="time_element" class="space-y-1.5">
+							<span id="currentTime" class="block text-3xl font-bold"></span>
+							<span id="currentDate" class="block text-lg font-semibold"></span>
+						</time>
+					</section>
+
+					<!-- Stopwatch -->
+					<section
+						role="tabpanel"
+						data-hash="stopwatch"
+						class="swiper-slide flex flex-col items-center justify-evenly rounded-b-2xl bg-gradient-to-b from-yellow-400 to-yellow-500 text-center">
+						<!-- Stopwatch icon -->
+						<figure>
+							<svg viewBox="0 0 448 512" aria-hidden="true" class="h-32 fill-slate-100">
+								<path
+									d="M432 304c0 114.9-93.1 208-208 208S16 418.9 16 304c0-104 76.3-190.2 176-205.5V64h-28c-6.6 0-12-5.4-12-12V12c0-6.6 5.4-12 12-12h120c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-28v34.5c37.5 5.8 71.7 21.6 99.7 44.6l27.5-27.5c4.7-4.7 12.3-4.7 17 0l28.3 28.3c4.7 4.7 4.7 12.3 0 17l-29.4 29.4-.6.6C419.7 223.3 432 262.2 432 304zm-176 36V188.5c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12V340c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12z" />
+							</svg>
+						</figure>
+
+						<p class="block w-72 text-[40px] font-bold" id="stopwatchTimerContainer">00 : 00 : 00</p>
+
+						<!-- Stopwatch contorls -->
+						<div class="-mt-7 flex w-72 items-center justify-around text-xl">
+							<button type="button" id="stopwatchResetBtn" class="btn btn--reset hidden">Reset</button>
+							<button type="button" id="stopwatchControlBtn" class="btn">Start</button>
+						</div>
+					</section>
+
+					<!-- Countdown timer -->
+					<section
+						role="tabpanel"
+						data-hash="countdown"
+						class="swiper-slide flex flex-col items-center justify-evenly rounded-b-2xl bg-gradient-to-b from-green-500 to-green-600 text-center">
+						<!-- Countdown icon -->
+						<figure>
+							<svg viewBox="0 0 512 512" aria-hidden="true" class="h-24 fill-slate-100">
+								<path
+									d="M256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C201.7 512 151.2 495 109.7 466.1C95.2 455.1 91.64 436 101.8 421.5C111.9 407 131.8 403.5 146.3 413.6C177.4 435.3 215.2 448 256 448C362 448 448 362 448 256C448 149.1 362 64 256 64C202.1 64 155 85.46 120.2 120.2L151 151C166.1 166.1 155.4 192 134.1 192H24C10.75 192 0 181.3 0 168V57.94C0 36.56 25.85 25.85 40.97 40.97L74.98 74.98C121.3 28.69 185.3 0 255.1 0L256 0zM256 128C269.3 128 280 138.7 280 152V246.1L344.1 311C354.3 320.4 354.3 335.6 344.1 344.1C335.6 354.3 320.4 354.3 311 344.1L239 272.1C234.5 268.5 232 262.4 232 256V152C232 138.7 242.7 128 256 128V128z" />
+							</svg>
+						</figure>
+
+						<p class="block w-40 text-[40px] font-bold" id="countdownTimerContainer">00 : 00</p>
+
+						<!-- Countdown timer controls -->
+						<form id="countdownTimerForm" class="-mt-4 flex flex-col items-center justify-center space-y-4">
+							<label for="countdownInput" class="sr-only">Minutes</label>
+							<input
+								required
+								type="number"
+								min="1"
+								max="60"
+								inputmode="numeric"
+								placeholder="Minutes"
+								pattern="[1-9][0-9]{0,2}"
+								title="A natural number between 1 and 60"
+								id="countdownInput"
+								class="h-12 w-32 select-text rounded-lg bg-slate-100 text-center text-2xl font-semibold text-slate-950 outline-offset-0 placeholder:text-xl read-only:cursor-default read-only:focus:outline-none" />
+
+							<fieldset class="flex w-72 items-center justify-evenly text-xl">
+								<button type="reset" id="countdownResetBtn" class="btn btn--reset hidden">Reset</button>
+								<button type="submit" id="countdownControlBtn" class="btn">Start</button>
+							</fieldset>
+						</form>
+					</section>
+				</div>
+			</article>
+		</main>
+
+		<footer class="absolute bottom-7">
+			<address class="inline-block space-x-0 text-center not-italic">
+				<small class="pt-0.5 text-base text-slate-950">©</small>
+				<a
+					href="https://shayan-zamani.me"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="!focus-visible:text-current ml-2 rounded-md text-sm font-semibold text-blue-600 underline duration-150 visited:text-purple-700 hover:text-blue-700 visited:hover:text-purple-800 focus-visible:outline-offset-2 focus-visible:visited:outline-purple-700 sm:text-base">
+					Shayan Zamani
+				</a>
+			</address>
+		</footer>
+	</body>
+</html>

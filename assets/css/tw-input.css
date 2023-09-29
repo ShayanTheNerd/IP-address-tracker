@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* Focus ring */
+	:where(a, [tabindex='0'], input) {
+		@apply rounded-sm;
+	}
+	:where(button, a, [tabindex='0'], input):focus-visible {
+		@apply outline outline-[3.5px] outline-offset-4 outline-blue-500;
+	}
+
+	/* Remove arrows from number inputs */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+	input[type='number'] {
+		appearance: textfield;
+		-moz-appearance: textfield;
+	}
+}
+
+@layer components {
+	/* Custom button class component */
+	.btn {
+		@apply h-12 w-32 rounded-lg bg-blue-500 font-semibold capitalize duration-150 hover:bg-blue-600;
+	}
+	.btn--reset {
+		@apply bg-red-500 hover:bg-red-600 !important;
+	}
+
+	/* Swiper's pagination bullets */
+	.cubic-slider__pagination a {
+		@apply !m-0 flex h-full flex-auto items-center justify-center rounded-none bg-[#0000004d] opacity-100 transition-all focus-within:bg-[#00000080] focus-within:outline-none hover:bg-[#00000080];
+	}
+
+	/* Analog clock */
+	.analog-clock {
+		/* prettier-ignore */
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+	.analog-clock__hand {
+		@apply absolute top-1/2 block origin-[100%] rounded bg-slate-900 transition-all duration-200;
+		transition-timing-function: cubic-bezier(0.1, 2, 0.58, 1);
+	}
+}

@@ -11,3 +11,36 @@
 		@apply outline outline-[3.5px] outline-offset-4 outline-blue-500;
 	}
 }
+
+/* Rubik font declarations */
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 400;
+	font-display: swap;
+	unicode-range: U+0020-2084;
+	src:
+		local('Rubik'),
+		local(Rubik Regular),
+		local('Rubik-Regular'),
+		url('../fonts/rubik-400.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 500;
+	font-display: swap;
+	unicode-range: U+0020-2084;
+	src:
+   local(Rubik Medium),
+		local('Rubik-Medium'),
+		url('../fonts/rubik-500.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 700;
+	font-display: swap;
+	unicode-range: U+0020-2084;
+	src:
+   local(Rubik Bold),
+		local('Rubik-Bold'),
+		url('../fonts/rubik-700.woff2') format('woff2');
+}

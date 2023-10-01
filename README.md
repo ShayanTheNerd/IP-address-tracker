@@ -20,16 +20,16 @@
 <h3>Links</h3>
 <ul>
    <li>
-      <a href="https://shayanthenerd.github.io/multiplication-table">Project homepage</a>
+      <a href="https://shayanthenerd.github.io/IP-address-tracker">Project homepage</a>
    </li>
    <li>
-      <a href="https://github.com/ShayanTheNerd/multiplication-table">GitHub repository</a>
+      <a href="https://github.com/ShayanTheNerd/IP-address-tracker">GitHub repository</a>
    </li>
    <li>
-      <a href="https://github.com/ShayanTheNerd/multiplication-table/issues">Issues</a>
+      <a href="https://github.com/ShayanTheNerd/IP-address-tracker/issues">Issues</a>
    </li>
    <li>
-      <a href="https://github.com/ShayanTheNerd/multiplication-table/issues">Pull requests</a>
+      <a href="https://github.com/ShayanTheNerd/IP-address-tracker/issues">Pull requests</a>
    </li>
    <li>
       <a href="https://github.com/ShayanTheNerd?tab=repositories">My other projects</a>
@@ -61,7 +61,7 @@
 <h3>I learned:</h3>
 <ul>
    <li>How to implement interactive maps using <a href="https://leafletjs.com">Leaflet.js</a>.</li>
-   <li>How to use <a href="https://geo.ipify.org">IP Geolocation API</a> to track the geographical location an IP address.</li>
+   <li>How to use <a href="https://geo.ipify.org">IP Geolocation API</a> to track the geographical location of an IP address.</li>
 </ul>
 
 <h2>Development setup</h2>

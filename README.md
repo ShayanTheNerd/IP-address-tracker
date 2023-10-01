@@ -1,124 +1,139 @@
-# Multi-Function Timepiece
+<h1>IP Address Tracker - A Frontend Mentor Challenge</h1>
 
-Multi-Function Timepiece is a collection of 3 handy tools (analog clock, stopwatch, and countdown timer) all gathered in a magical box with cubic animations and effects!
-
+<p>
+   This is a solution to the <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0">IP address tracker challenge on Frontend Mentor</a>.
+</p>
 <figure>
-  <img src="https://github.com/ShayanTheNerd/multi-function-timepiece/blob/main/og-img.webp" />
+   <img src="https://github.com/ShayanTheNerd/IP-address-tracker/blob/main/og-img.webp" alt="IP Address Tracker preview" />
 </figure>
 
-## Technologies used in this project
-
+<h2>Overview</h2>
+<h3>The challenge</h3>
+<p>Users should be able to:</p>
 <ul>
-  <li>HTML, CSS, JavaScript</li>
-  <li>
-    <a href="https://tailwindcss.com">Tailwind CSS</a>
-  </li>
-  <li>
-    <a href="https://swiperjs.com">Swiper.js</a>
-  </li>
-  <li>
-    <a href="https://fonts.google.com">Google Fonts API</a>
-  </li>
+   <li>View the optimal layout for each page depending on their device's screen size.</li>
+   <li>See hover states for all interactive elements on the page.</li>
+   <li>See their own IP address on the map on the initial page load.</li>
+   <li>Search for any IP addresses or domains and see the key information and location.</li>
 </ul>
 
-## Features
-
+<h3>Links</h3>
 <ul>
-  <li>Semantic, clean, and extendable code</li>
-  <li>Analog clock</li>
-  <li>Full date and time preview</li>
-  <li>Stopwatch</li>
-  <li>Countdown timer</li>
+   <li>
+      <a href="https://shayanthenerd.github.io/multiplication-table">Project homepage</a>
+   </li>
+   <li>
+      <a href="https://github.com/ShayanTheNerd/multiplication-table">GitHub repository</a>
+   </li>
+   <li>
+      <a href="https://github.com/ShayanTheNerd/multiplication-table/issues">Issues</a>
+   </li>
+   <li>
+      <a href="https://github.com/ShayanTheNerd/multiplication-table/issues">Pull requests</a>
+   </li>
+   <li>
+      <a href="https://github.com/ShayanTheNerd?tab=repositories">My other projects</a>
+   </li>
+   <li>
+      <a href="https://www.frontendmentor.io/profile/ShayanTheNerd">My Frontend Mentor profile</a>
+   </li>
 </ul>
 
-## How it works
-
-The clock displays the current time both on an analog clock and separately down below it along with the current, full date.<br />
-The stopwatch functions similar to a regular stopwatch on a mobile device.<br />
-The countdown timer accepts an input (a natural number from 1 to 60), then starts counting down until the very last second and after that, displays the 'finished!' message.
-
-## Development setup
-
-#### First, clone the project:
-
-```sh
-git clone https://github.com/ShayanTheNerd/multi-function-timepiece.git
-```
-
-Alternatively, you can copy the source of the project directly to your local environment using <a href="https://github.com/Rich-Harris/degit">Degit</a>:
-
-```sh
-npm install -g degit
-
-degit https://github.com/ShayanTheNerd/multi-function-timepiece new-project-folder
-```
-
-#### Then, install necessary npm packages:
-
-```sh
-npm i
-```
-
-#### Finally, run the `dev` script and preview project on a local server:
-
-```sh
-npm run dev
-```
-
-#### In order to format the code with Prettier, install the extension on your code editor. Then, either enable the `"editor.formatOnSave": true` (or a similar option) in the settings, or manually run this command:
-
-```sh
-npm run format
-```
-
-## Deployment and production
-
-#### Before deploying the project, run this command to minify all CSS code and prepare for production:
-
-```sh
-npm run build
-```
-
-## Style Guide
-
-If you want to develop this project, please stick to these rules:
-
+<h2>My process</h2>
+<h3>Built with:</h3>
 <ul>
-  <li>Follow the current architecture, coding paradigm, and project folder structure</li>
-  <li>Follow the current character case principals for ids, classes, variables, file and folder names, etc.</li>
-  <li>Code based on the current libraries, frameworks, and packages included in the project</li>
-  <li>Use <a href="https://getbem.com">BEM</a> methodology for naming CSS classes</li>
-  <li>If you need to access an HTML element in JavaScript by its class name, prefix its class name with <code>js-</code></li>
+   <li>Semantic HTML</li>
+   <li>Vanilla JavaScript</li>
+   <li>
+      <a href="https://tailwindcss.com">Tailwind CSS</a> - Styling
+   </li>
+   <li>
+      <a href="https://leafletjs.com">Leaflet.js</a> - Interactive map
+   </li>
+   <li>
+      <a href="https://fonts.google.com">Google Fonts API</a> - Custom font
+   </li>
+   <li>
+      <a href="https://geo.ipify.org">IP Geolocation API</a> - IP address tracking
+   </li>
 </ul>
 
-## Contribution
+<h3>I learned:</h3>
+<ul>
+   <li>How to implement interactive maps using <a href="https://leafletjs.com">Leaflet.js</a>.</li>
+   <li>How to use <a href="https://geo.ipify.org">IP Geolocation API</a> to track the geographical location an IP address.</li>
+</ul>
 
-Your contribution is always welcome, please follow these steps:
+<h2>Development setup</h2>
+<p>1. First, you need to clone the project:</p>
 
+```sh
+git clone https://github.com/ShayanTheNerd/IP-address-tracker.git
+```
+
+<p>
+   Alternatively, you can copy the source of the project directly to your local environment using <a href="https://github.com/Rich-Harris/degit">Degit</a>:
+</p>
+
+```sh
+pnpm i -g degit
+
+degit https://github.com/ShayanTheNerd/IP-address-tracker new-project-folder
+```
+
+<p>2. Then, install corresponding packages and start the dev server:</p>
+
+```sh
+pnpm i
+
+pnpm run dev
+```
+
+<p>3. Finally, run the <code>dev</code> script and preview the project on a local server:</p>
+
+```sh
+pnpm run dev
+```
+
+<h2>Deployment and production</h2>
+<p>Before deploying the project or creating a new pull request, run the following commands and make sure there are no errors:</p>
+
+```sh
+pnpm run format
+
+pnpm run build
+```
+
+<h2>Style Guide</h2>
+<p>If you want to develop this project, please stick to these rules:</p>
+<ul>
+   <li>Follow the current architecture, coding paradigm, and project folder structure.</li>
+   <li>Follow the current character case principals for ids, classes, variables, file and folder names, etc.</li>
+   <li>Code based on the current libraries, frameworks, and packages included in the project.</li>
+   <li>For styling, utilize Tailwind's features as much as possible, but also make sure to use <a href="https://getbem.com">BEM</a> methodology for naming custom CSS classes.</li>
+   <li>In case you need to access an HTML element in JavaScript by a class name, prefix the class name with <code>js-</code>. For example, <code>js-submit-btn</code>.</li>
+   <li>Add Git commit messages considering <a href="https://www.conventionalcommits.org">Conventional Commits</a>.</li>
+</ul>
+
+<h2>Contribution</h2>
+<p>Your contribution is always welcome, please follow these steps:</p>
 <ol>
-  <li>Fork the project (https://github.com/ShayanTheNerd/multi-function-timepiece/fork)</li>
-  <li>Create your feature branch (<code>git checkout -b feature/branch-name</code>)</li>
-  <li>Make sure you follow instructions in the <a href="https://github.com/ShayanTheNerd/multi-function-timepiece#style-guide">style guide</a></li>
-  <li>Commit your changes (<code>git commit -am 'Added foo bar baz feature'</code>)</li>
-  <li>Push to the branch (<code>git push origin feature/branch-name</code>)</li>
-  <li>Create a new Pull Request</li>
+   <li>
+      <a href="https://github.com/ShayanTheNerd/IP-address-tracker/fork">Fork the project</a>.
+   </li>
+   <li>Create your feature branch: <code>git checkout -b feature/branch-name</code>.</li>
+   <li>Make sure to follow instructions in the <a href="https://github.com/ShayanTheNerd/IP-address-tracker#style-guide">style guide</a> section.</li>
+   <li>Stage all changes you made: <code>git add -A</code>.</li>
+   <li>Commit all staged changes with a descriptive commit message: <code>git commit -m 'feat: add foo bar baz'</code>.</li>
+   <li>Push everything to your feature branch: <code>git push origin feature/branch-name</code>.</li>
+   <li>Create a new Pull Request.</li>
 </ol>
 
-## Links
-
-Project homepage: https://shayanthenerd.github.io/multi-function-timepiece <br /><br />
-Repository: https://github.com/ShayanTheNerd/multi-function-timepiece <br /><br />
-Issues: https://github.com/ShayanTheNerd/multi-function-timepiece/issues <br /><br />
-Pull requests: https://github.com/ShayanTheNerd/multi-function-timepiece/pulls <br /><br />
-More projects like this: https://github.com/ShayanTheNerd?tab=repositories <br /><br />
-
-## Author
-
-<a href="https://shayan-zamani.me">Shayan Zamani</a>
-
-## License
-
-The code in this project is licensed under <a href="https://github.com/ShayanTheNerd/multi-function-timepiece/blob/main/LICENSE.md">MIT license</a>. You're free to use it; but a link to this page and mentioning the author's name is mandatory.
+<h2>License</h2>
+<p>
+   This project is licensed under <a href="https://github.com/ShayanTheNerd/IP-address-tracker/blob/main/LICENSE.md">MIT license</a>. You're free to use it, but a link to this page and mentioning the author's name is mandatory. Created by <a href="https://shayan-zamani.me">Shayan Zamani</a>.
+</p>
 
 <br />
-<a href="https://github.com/ShayanTheNerd/multi-function-timepiece#multi-function-timepiece">back to top ⬆️</a>
+
+<a href="https://github.com/ShayanTheNerd/IP-address-tracker#IP-address-tracker">back to top ⬆️</a>

@@ -10,6 +10,10 @@ export default {
 			fontFamily: {
 				sans: ['Rubik', ...defaultTheme.fontFamily.sans],
 			},
+			colors: {
+				grey: '#969696',
+				birch: '#2b2b2b',
+			},
 		},
 	},
 };

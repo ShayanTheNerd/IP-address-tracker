@@ -43,5 +43,65 @@
             fill-rule="evenodd"
             d="M39.263 7.673c8.897 8.812 8.966 23.168.153 32.065l-.153.153L23 56 6.737 39.89C-2.16 31.079-2.23 16.723 6.584 7.826l.153-.152c9.007-8.922 23.52-8.922 32.526 0zM23 14.435c-5.211 0-9.436 4.185-9.436 9.347S17.79 33.128 23 33.128s9.436-4.184 9.436-9.346S28.21 14.435 23 14.435z" />
       </svg> -->
+
+		<header
+			class="flex h-[305px] flex-col items-center bg-[url('../images/pattern-bg-mobile.png')] bg-cover bg-no-repeat shadow-2xl sm:bg-[url('../images/pattern-bg-desktop.png')] sm:bg-center lg:h-[230px]">
+			<h1 class="my-6 text-xl font-medium tracking-wide text-white sm:text-2xl lg:text-3xl">IP Address Tracker</h1>
+
+			<search class="w-full max-w-lg px-6">
+				<form id="IP_tracker_form" class="flex rounded-xl shadow-2xl">
+					<label for="IP_input" class="sr-only">Search for any IP address</label>
+					<input
+						required
+						type="search"
+						id="IP_input"
+						title="Enter a valid IP address."
+						placeholder="Search for any IP address"
+						pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+						class="h-12 w-full rounded-l-xl bg-white px-4 py-2 text-birch placeholder:text-sm focus:outline focus:outline-[3px] focus:outline-offset-[-3px] focus:outline-birch placeholder:sm:text-base" />
+
+					<button
+						type="submit"
+						title="Look up"
+						class="group flex w-12 shrink-0 items-center justify-center rounded-r-xl bg-birch transition-opacity focus-within:outline-none hover:opacity-[0.85] focus-visible:opacity-[0.85]">
+						<svg width="11" height="14" class="stroke-white transition-transform group-active:scale-90">
+							<path fill="none" stroke-width="3" d="M2 1l6 6-6 6" />
+						</svg>
+					</button>
+				</form>
+			</search>
+		</header>
+
+		<main>
+			<!-- IP address info -->
+			<div class="mx-auto max-w-lg -translate-y-1/2 px-6 lg:max-w-4xl">
+				<article class="rounded-xl bg-white py-6 shadow-2xl">
+					<ul class="lg:custom-divide-x space-y-6 text-center lg:grid lg:grid-cols-4 lg:space-y-0 lg:text-start">
+						<li class="space-y-1.5 px-6">
+							<p class="text-xs font-bold tracking-widest text-grey">IP ADDRESS</p>
+							<strong id="IP_address" class="block text-xl font-medium tracking-wide">192.212.174.101</strong>
+						</li>
+						<li class="space-y-1.5 px-6">
+							<p class="text-xs font-bold tracking-widest text-grey">LOCATION</p>
+							<strong id="location" class="block text-xl font-medium tracking-wide">Brooklyn, NY 10001</strong>
+						</li>
+						<li class="space-y-1.5 px-6">
+							<p class="text-xs font-bold tracking-widest text-grey">TIMEZONE</p>
+							<strong class="block text-xl font-medium tracking-wide">
+								UTC
+								<time id="timezone">-05:00</time>
+							</strong>
+						</li>
+						<li class="space-y-1.5 px-6">
+							<p class="text-xs font-bold tracking-widest text-grey">ISP</p>
+							<strong id="isp" class="block text-xl font-medium tracking-wide">SpaceX Starlink</strong>
+						</li>
+					</ul>
+				</article>
+			</div>
+
+			<!-- Map -->
+			<figure></figure>
+		</main>
 	</body>
 </html>

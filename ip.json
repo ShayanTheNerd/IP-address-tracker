@@ -1,0 +1,28 @@
+{
+	"ip": "8.8.8.8",
+	"location": {
+		"country": "US",
+		"region": "California",
+		"city": "Mountain View",
+		"lat": 32.69922,
+		"lng": -117.11281,
+		"postalCode": "",
+		"timezone": "-07:00",
+		"geonameId": 5375481
+	},
+	"domains": [
+		"21vek-5056.21vek-dev.by",
+		"21vek-5057.21vek-dev.by",
+		"21vek-5070.21vek-dev.by",
+		"21vek-5076.21vek-dev.by",
+		"21vek-5078.21vek-dev.by"
+	],
+	"as": {
+		"asn": 15169,
+		"name": "GOOGLE",
+		"route": "8.8.8.0/24",
+		"domain": "https://about.google/intl/en/",
+		"type": "Content"
+	},
+	"isp": "Google LLC"
+}

@@ -17,6 +17,9 @@ export default {
 			opacity: {
 				85: '0.85',
 			},
+			zIndex: {
+				500: 500,
+			},
 		},
 	},
 };

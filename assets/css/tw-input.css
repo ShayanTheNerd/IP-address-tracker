@@ -20,6 +20,16 @@
 	}
 }
 
+/* Loading spinner animation */
+@keyframes spin {
+	from {
+		rotate: 0deg;
+	}
+	to {
+		rotate: 360deg;
+	}
+}
+
 /* Rubik font declarations */
 @font-face {
 	font-family: 'Rubik';

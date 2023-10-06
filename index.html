@@ -49,25 +49,41 @@
 			<h1 class="my-6 text-xl font-medium tracking-wide text-white sm:text-2xl lg:text-3xl">IP Address Tracker</h1>
 
 			<search class="w-full max-w-lg px-6">
-				<form id="IP_tracker_form" class="flex rounded-xl shadow-2xl">
-					<label for="IP_input" class="sr-only">Search for any IP address</label>
-					<input
-						required
-						type="search"
-						id="IP_input"
-						title="Enter a valid IP address."
-						placeholder="Search for any IP address"
-						pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
-						class="h-12 w-full rounded-l-xl bg-white px-4 py-2 text-birch placeholder:text-sm focus:outline focus:outline-[3px] focus:outline-offset-[-3px] focus:outline-birch placeholder:sm:text-base" />
+				<form id="IP_tracker_form" class="rounded-xl shadow-2xl">
+					<fieldset id="IP_tracker_form_fieldset" class="group flex disabled:opacity-90">
+						<legend class="sr-only">Search for any IP address</legend>
 
-					<button
-						type="submit"
-						title="Look up"
-						class="group flex w-12 shrink-0 items-center justify-center rounded-r-xl bg-birch transition-opacity focus-within:outline-none hover:opacity-[0.85] focus-visible:opacity-[0.85]">
-						<svg width="11" height="14" class="stroke-white transition-transform group-active:scale-90">
-							<path fill="none" stroke-width="3" d="M2 1l6 6-6 6" />
-						</svg>
-					</button>
+						<label for="IP_input" class="sr-only">IP address</label>
+						<input
+							required
+							type="search"
+							id="IP_input"
+							title="Enter a valid IP address. E.g., '192.158.1.38'."
+							placeholder="Search for any IP address"
+							pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+							class="h-12 w-full rounded-l-xl bg-white px-4 py-2 text-birch placeholder:text-sm focus:outline focus:outline-[3px] focus:outline-offset-[-3px] focus:outline-birch placeholder:sm:text-base" />
+
+						<button
+							type="submit"
+							title="Look up"
+							class="focus-visible:opacity-85 group-enabled:hover:opacity-85 group flex w-12 shrink-0 items-center justify-center rounded-r-xl bg-birch transition-opacity focus-within:outline-none">
+							<svg
+								width="11"
+								height="14"
+								class="stroke-white transition-transform group-active:scale-90 group-disabled:hidden">
+								<path stroke-width="3" d="M2 1l6 6-6 6" />
+							</svg>
+
+							<!-- Loading spinner -->
+							<svg
+								viewBox="0 0 24 24"
+								class="hidden h-7 w-7 fill-white group-disabled:inline-block"
+								style="animation: spin 2s infinite linear">
+								<path
+									d="M11 2v4c0 0.552 0.448 1 1 1s1-0.448 1-1v-4c0-0.552-0.448-1-1-1s-1 0.448-1 1zM11 18v4c0 0.552 0.448 1 1 1s1-0.448 1-1v-4c0-0.552-0.448-1-1-1s-1 0.448-1 1zM4.223 5.637l2.83 2.83c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-2.83-2.83c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414zM15.533 16.947l2.83 2.83c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-2.83-2.83c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414zM2 13h4c0.552 0 1-0.448 1-1s-0.448-1-1-1h-4c-0.552 0-1 0.448-1 1s0.448 1 1 1zM18 13h4c0.552 0 1-0.448 1-1s-0.448-1-1-1h-4c-0.552 0-1 0.448-1 1s0.448 1 1 1zM5.637 19.777l2.83-2.83c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-2.83 2.83c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0zM16.947 8.467l2.83-2.83c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-2.83 2.83c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0z" />
+							</svg>
+						</button>
+					</fieldset>
 				</form>
 			</search>
 		</header>
@@ -79,22 +95,22 @@
 					<ul class="lg:custom-divide-x space-y-6 text-center lg:grid lg:grid-cols-4 lg:space-y-0 lg:text-start">
 						<li class="space-y-1.5 px-6">
 							<p class="text-xs font-bold tracking-widest text-grey">IP ADDRESS</p>
-							<strong id="IP_address" class="block text-xl font-medium tracking-wide">192.212.174.101</strong>
+							<strong id="IP_address" class="block text-xl font-medium tracking-wide">0.0.0.0</strong>
 						</li>
 						<li class="space-y-1.5 px-6">
 							<p class="text-xs font-bold tracking-widest text-grey">LOCATION</p>
-							<strong id="IP_location" class="block text-xl font-medium tracking-wide">Brooklyn, NY 10001</strong>
+							<strong id="IP_location" class="block text-xl font-medium tracking-wide">Lorem, ipsum dolor</strong>
 						</li>
 						<li class="space-y-1.5 px-6">
 							<p class="text-xs font-bold tracking-widest text-grey">TIMEZONE</p>
 							<strong class="block text-xl font-medium tracking-wide">
 								UTC
-								<time id="IP_timezone">-05:00</time>
+								<time id="IP_timezone">-00:00</time>
 							</strong>
 						</li>
 						<li class="space-y-1.5 px-6">
 							<p class="text-xs font-bold tracking-widest text-grey">ISP</p>
-							<strong id="IP_ISP" class="block text-xl font-medium tracking-wide">SpaceX Starlink</strong>
+							<strong id="IP_ISP" class="block text-xl font-medium tracking-wide">Lorem ipsum</strong>
 						</li>
 					</ul>
 				</article>

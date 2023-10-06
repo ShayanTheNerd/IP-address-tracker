@@ -14,6 +14,9 @@ export default {
 				grey: '#969696',
 				birch: '#2b2b2b',
 			},
+			opacity: {
+				85: '0.85',
+			},
 		},
 	},
 };

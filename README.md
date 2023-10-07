@@ -29,7 +29,7 @@
       <a href="https://github.com/ShayanTheNerd/IP-address-tracker/issues">Issues</a>
    </li>
    <li>
-      <a href="https://github.com/ShayanTheNerd/IP-address-tracker/issues">Pull requests</a>
+      <a href="https://github.com/ShayanTheNerd/IP-address-tracker/pulls">Pull requests</a>
    </li>
    <li>
       <a href="https://github.com/ShayanTheNerd?tab=repositories">My other projects</a>

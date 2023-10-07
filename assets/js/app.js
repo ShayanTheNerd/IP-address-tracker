@@ -27,5 +27,6 @@ IPTrackerForm.addEventListener('submit', async event => {
 	displayIPData(IPData);
 
 	toggleLoadingSpinner();
+	IPInput.value = '';
 	IPInput.focus();
 });

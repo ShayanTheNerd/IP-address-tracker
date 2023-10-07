@@ -7,7 +7,7 @@
 		<title>IP Address Tracker</title>
 
 		<meta name="color-scheme" content="light" />
-		<meta name="theme-color" content="#5873da" />
+		<meta name="theme-color" content="#ffffff" />
 		<meta name="author" content="Shayan Zamani" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="keywords" content="online free ip address tracker, frontend mentor ip address tracker challenge" />
@@ -40,10 +40,13 @@
 		<script type="module" src="./assets/js/app.js"></script>
 	</head>
 
-	<body class="flex min-h-screen flex-col supports-[min-height:100dvh]:min-h-[100dvh]">
+	<body
+		class="flex min-h-screen flex-col [-webkit-tap-highlight-color:transparent] selection:bg-[#5873da] selection:text-white supports-[min-height:100dvh]:min-h-[100dvh]">
 		<header
-			class="relative z-500 flex h-[305px] flex-col items-center bg-[url('../images/pattern-bg-mobile.png')] bg-cover bg-no-repeat shadow-2xl sm:bg-[url('../images/pattern-bg-desktop.png')] sm:bg-center lg:h-[230px]">
-			<h1 class="my-6 text-xl font-medium tracking-wide text-white sm:text-2xl lg:text-3xl">IP Address Tracker</h1>
+			class="relative z-500 flex h-[244px] flex-col items-center bg-[url('../images/pattern-bg-mobile.png')] bg-cover bg-no-repeat shadow-2xl sm:h-[250px] sm:bg-[url('../images/pattern-bg-desktop.png')] sm:bg-center lg:h-[230px]">
+			<h1 class="my-3.5 text-xl font-medium tracking-wide text-white sm:text-2xl lg:my-6 lg:text-3xl">
+				IP Address Tracker
+			</h1>
 
 			<!-- IP search form -->
 			<search class="w-full max-w-lg px-6">
@@ -51,30 +54,34 @@
 					<fieldset id="IP_tracker_form_fieldset" class="group flex disabled:opacity-90">
 						<legend class="sr-only">Search for any IP address</legend>
 
-						<label for="IP_input" class="sr-only">IP address</label>
-						<input
-							required
-							type="search"
-							id="IP_input"
-							title="Enter a valid IP address. E.g., '192.158.1.38'."
-							placeholder="Search for any IP address"
-							pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
-							class="h-12 w-full rounded-l-xl bg-white px-4 py-2 text-birch placeholder:text-sm focus:outline focus:outline-[3px] focus:outline-offset-[-3px] focus:outline-birch placeholder:sm:text-base" />
+						<label class="relative w-full after:absolute after:right-0 after:h-full after:w-0.5 after:bg-birch">
+							<p class="sr-only">IP address</p>
+							<input
+								required
+								type="search"
+								id="IP_input"
+								title="Enter a valid IP address. E.g., '192.158.1.38'."
+								placeholder="Search for any IP address"
+								pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+								class="h-12 w-full rounded-l-xl rounded-r-none bg-white px-3.5 py-2 text-birch placeholder:text-sm focus:outline focus:outline-[3px] focus:outline-offset-[-3px] focus:outline-birch sm:px-4 placeholder:sm:text-base" />
+						</label>
 
 						<button
 							type="submit"
 							title="Look up"
-							class="group flex w-12 shrink-0 items-center justify-center rounded-r-xl bg-birch transition-opacity focus-within:outline-none focus-visible:opacity-85 group-enabled:hover:opacity-85">
+							class="group flex w-12 shrink-0 items-center justify-center rounded-r-xl bg-birch pe-0.5 transition-opacity focus-within:outline-none focus-visible:opacity-90 group-enabled:hover:opacity-90">
 							<svg
+								aria-hidden="true"
 								width="11"
 								height="14"
-								class="stroke-white transition-transform group-active:scale-90 group-disabled:hidden">
-								<path stroke-width="3" d="M2 1l6 6-6 6" />
+								class="transition-transform group-active:scale-90 group-disabled:hidden">
+								<path fill="none" stroke="#ffffff" stroke-width="3" d="M2 1l6 6-6 6" />
 							</svg>
 
 							<!-- Loading spinner -->
 							<svg
 								viewBox="0 0 24 24"
+								aria-hidden="true"
 								class="hidden h-7 w-7 fill-white group-disabled:inline-block"
 								style="animation: spin 2s infinite linear">
 								<path
@@ -88,27 +95,33 @@
 
 		<main class="relative flex grow flex-col items-center">
 			<!-- IP address info -->
-			<div class="absolute z-500 mx-auto max-w-lg -translate-y-1/2 px-6 lg:max-w-4xl">
-				<article class="rounded-xl bg-white py-6 shadow-2xl">
-					<ul class="lg:custom-divide-x space-y-6 text-center lg:grid lg:grid-cols-4 lg:space-y-0 lg:text-start">
-						<li class="space-y-1.5 px-6">
-							<p class="text-xs font-bold tracking-widest text-grey">IP ADDRESS</p>
-							<strong id="IP_address" class="block text-xl font-medium tracking-wide">0.0.0.0</strong>
+			<div class="absolute z-500 mx-auto w-full max-w-lg -translate-y-1/2 px-6 lg:max-w-4xl">
+				<article class="rounded-xl bg-white py-4 shadow-2xl lg:py-6">
+					<ul class="lg:custom-divide-x space-y-4 text-center lg:grid lg:grid-cols-4 lg:space-y-0 lg:text-start">
+						<li class="space-y-1 px-4 lg:space-y-1.5 lg:px-6">
+							<p class="text-xxs font-bold leading-2 tracking-widest text-grey lg:text-xs">IP ADDRESS</p>
+							<strong id="IP_address" class="line-clamp-2 font-medium tracking-wide lg:line-clamp-3 lg:text-xl">
+								0.0.0.0
+							</strong>
 						</li>
-						<li class="space-y-1.5 px-6">
-							<p class="text-xs font-bold tracking-widest text-grey">LOCATION</p>
-							<strong id="IP_location" class="block text-xl font-medium tracking-wide">Lorem, ipsum dolor</strong>
+						<li class="space-y-1 px-4 lg:space-y-1.5 lg:px-6">
+							<p class="text-xxs font-bold leading-2 tracking-widest text-grey lg:text-xs">LOCATION</p>
+							<strong id="IP_location" class="line-clamp-2 font-medium tracking-wide lg:line-clamp-3 lg:text-xl">
+								Lorem, ipsum dolor
+							</strong>
 						</li>
-						<li class="space-y-1.5 px-6">
-							<p class="text-xs font-bold tracking-widest text-grey">TIMEZONE</p>
-							<strong class="block text-xl font-medium tracking-wide">
+						<li class="space-y-1 px-4 lg:space-y-1.5 lg:px-6">
+							<p class="text-xxs font-bold leading-2 tracking-widest text-grey lg:text-xs">TIMEZONE</p>
+							<strong class="line-clamp-2 font-medium tracking-wide lg:line-clamp-3 lg:text-xl">
 								UTC
 								<time id="IP_timezone">-00:00</time>
 							</strong>
 						</li>
-						<li class="space-y-1.5 px-6">
-							<p class="text-xs font-bold tracking-widest text-grey">ISP</p>
-							<strong id="IP_ISP" class="block text-xl font-medium tracking-wide">Lorem ipsum</strong>
+						<li class="space-y-1 px-4 lg:space-y-1.5 lg:px-6">
+							<p class="text-xxs font-bold leading-2 tracking-widest text-grey lg:text-xs">ISP</p>
+							<strong id="IP_ISP" class="line-clamp-2 font-medium tracking-wide lg:line-clamp-3 lg:text-xl">
+								Lorem ipsum
+							</strong>
 						</li>
 					</ul>
 				</article>

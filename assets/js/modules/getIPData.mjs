@@ -8,9 +8,8 @@ export default async function getIPData(IPAddress) {
 
 	if (IPData) return IPData;
 
-	// const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${IPAddress}`);
-	// IPData = await response.json();
-	IPData = (await import('../../../ip.json', { assert: { type: 'json' } })).default;
+	const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${IPAddress}`);
+	IPData = await response.json();
 	saveIPToLocalstorage(IPData);
 
 	return IPData;

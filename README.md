@@ -81,19 +81,19 @@ pnpm i -g degit
 degit https://github.com/ShayanTheNerd/IP-address-tracker new-project-folder
 ```
 
-<p>2. Then, install corresponding packages and start the dev server:</p>
+<p>2. Then, install required packages:</p>
 
 ```sh
 pnpm i
-
-pnpm run dev
 ```
 
-<p>3. Finally, run the <code>dev</code> script and preview the project on a local server:</p>
+<p>3. Finally, run the <code>dev</code> script to start the dev server.:</p>
 
 ```sh
 pnpm run dev
 ```
+
+<p>Now, you can preview the project on a local server of your choice. My personal recommendation is the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server Extension</a>.</p>
 
 <h2>Deployment and production</h2>
 <p>Before deploying the project or creating a new pull request, run the following commands and make sure there are no errors:</p>

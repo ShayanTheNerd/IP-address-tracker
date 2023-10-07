@@ -87,7 +87,7 @@ degit https://github.com/ShayanTheNerd/IP-address-tracker new-project-folder
 pnpm i
 ```
 
-<p>3. Finally, run the <code>dev</code> script to start the dev server.:</p>
+<p>3. Finally, run the <code>dev</code> script to start the dev server:</p>
 
 ```sh
 pnpm run dev
@@ -136,4 +136,4 @@ pnpm run build
 
 <br />
 
-<a href="https://github.com/ShayanTheNerd/IP-address-tracker#IP-address-tracker">back to top ⬆️</a>
+<a href="https://github.com/ShayanTheNerd/IP-address-tracker#readme">back to top ⬆️</a>

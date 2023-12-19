@@ -16,7 +16,9 @@ window.addEventListener('load', async () => {
 	displayIPData(IPData);
 
 	toggleLoadingSpinner();
-	IPInput.focus();
+	const TW_LG_SCREEN_WIDTH = 1024;
+	const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+	if (viewportWidth >= TW_LG_SCREEN_WIDTH) IPInput.focus();
 });
 
 IPTrackerForm.addEventListener('submit', async event => {

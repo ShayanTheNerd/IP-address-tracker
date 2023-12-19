@@ -8,7 +8,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Rubik', ...defaultTheme.fontFamily.sans],
+				rubik: ['Rubik', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				grey: '#969696',

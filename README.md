@@ -131,9 +131,5 @@ pnpm run build
 
 <h2>License</h2>
 <p>
-   This project is licensed under <a href="https://github.com/ShayanTheNerd/IP-address-tracker/blob/main/LICENSE.md">MIT license</a>. You're free to use it, but a link to this page and mentioning the author's name is mandatory. Created by <a href="https://shayan-zamani.me">Shayan Zamani</a>.
+   This project is licensed under <a href="https://github.com/ShayanTheNerd/IP-address-tracker/blob/main/LICENSE.md">BSD 3 Clause License</a>. Created by <a href="https://shayan-zamani.me">Shayan Zamani</a>.
 </p>
-
-<br />
-
-<a href="https://github.com/ShayanTheNerd/IP-address-tracker#readme">back to top ⬆️</a>
